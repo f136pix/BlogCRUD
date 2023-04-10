@@ -1,0 +1,11 @@
+<%- include("partials/header"); -%>
+
+  <div class="tittle-header"><h1><%=titulo%></h1>
+    <form action="/delete/<%=id%>" method="post">
+      
+      <button>Deletar</button>
+    </form>
+  </div>
+  <p><%=conteudo%></p>
+
+<%- include("partials/footer"); -%>
