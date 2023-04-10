@@ -14,6 +14,9 @@ const conteudoContato = "Scelerisque eleifend donec pretium vulputate sapien. Rh
 //Inicando o Express
 const app = express();
 
+//Necessario para o deploy no RENDER
+const PORT = process.env.PORT || 3030;
+
 //Necessario para usar o EJS
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
@@ -132,5 +135,5 @@ app.post("/delete/:idDeletado",function(req,res){
 })
 
 app.listen(3000, function() {
-  console.log("Server ONLINE");
+  console.log("Server ONLINE em "+ PORT);
 });
